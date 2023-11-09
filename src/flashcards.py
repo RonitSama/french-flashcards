@@ -21,8 +21,9 @@ def new_word():
     window.after_cancel(timer)
 
     if words:
+        subjects = ['je', 'tu', 'il/elle', 'nous', 'vous', 'ils/elles']
         temp_word: str = random.choice(list(words.keys()))
-        temp_conj: str = random.choice(list(words[temp_word].keys()))
+        temp_conj: str = random.choice(subjects)
         current_word = {'Infinitive': f'{temp_word}, {temp_conj}', 'Conjugated': words[temp_word][temp_conj]}
         del words[temp_word]
     else:
